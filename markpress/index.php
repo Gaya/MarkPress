@@ -1,7 +1,11 @@
 <?php
 	/*
 	 * Plugin Name: MarkPress
-	 * Author: Neger
-	 * URL: http://www.aids.org
+	 * Author: Gaya Kessler
 	 */
+
+	include "classes/MarkPress.php";
+
+	new MarkPress(plugin_dir_path( __FILE__ ));
+
 ?>
