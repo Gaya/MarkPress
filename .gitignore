@@ -1,5 +1,9 @@
 .idea/
 www/
-vagrant/
-!vagrant/puphpet/
-!vagrant/Vagrantfile
+
+vagrant/.vagrant
+vagrant/cgi-bin
+vagrant/default
+vagrant/error
+vagrant/icons
+vagrant/wordpress
