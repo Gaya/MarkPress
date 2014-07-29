@@ -12,6 +12,7 @@ class MarkPress {
 		add_filter('template_include', array($this, 'catchThemeInclude'), 99);
 		add_filter('template_directory', array($this, 'catchTemplateFolder'), 99);
 		add_filter('stylesheet_directory', array($this, 'catchTemplateFolder'), 99);
+		add_filter('template_directory_uri', array($this, 'catchThemeURI'), 99);
 	}
 
 	function catchTemplateFolder() {
@@ -24,5 +25,9 @@ class MarkPress {
 		$template = $this->plugin_dir . "template/index.php";
 
 		return $template;
+	}
+
+	function catchThemeURI($dir) {
+		return plugins_url('markpress', $this->plugin_dir);
 	}
 }
