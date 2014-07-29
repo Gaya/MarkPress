@@ -1,0 +1,22 @@
+html, body {
+    min-height: 100%;
+    height: 100%;
+}
+
+#primary {
+    height: 100%;
+}
+
+#markpress-editor {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#markpress-preview {
+    @extend #markpress-editor;
+    right: 0;
+    overflow: auto;
+}

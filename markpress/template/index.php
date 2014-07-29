@@ -17,7 +17,10 @@
 get_header(); ?>
 
 	<div id="primary" class="site-content">
-		Hier komt de content
+
+		<textarea id="markpress-editor"></textarea>
+		<div id="markpress-preview"></div>
+
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
