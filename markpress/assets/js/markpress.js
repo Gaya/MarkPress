@@ -1,10 +1,9 @@
 (function ($) {
-    $(document).ready(function () {
-        var converter = new Markdown.Converter();
+    var converter = new Markdown.Converter();
 
-        $("#editor").on("input", function () {
-            var content = this.value;
-            $("#preview").html(converter.makeHtml(content));
+    $(document).ready(function () {
+        $("#markpress-editor").on("input", function () {
+            updatePreview();
         }).on("keydown", function (e) {
             if (e.keyCode === 9) { // tab was pressed
 
@@ -23,5 +22,12 @@
                 return false;
             }
         });
+
+        updatePreview();
     });
+
+    function updatePreview() {
+        var content = $("#markpress-editor").val();
+        $("#markpress-preview").html(converter.makeHtml(content));
+    }
 })(jQuery);
