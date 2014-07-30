@@ -8,6 +8,7 @@ class MarkPress {
 		if ( ! is_admin() ) {
 			$this->killTheTheme();
 			$this->loadAssets();
+			$this->loginIfNotLoggedIn();
 		}
 	}
 
@@ -41,5 +42,13 @@ class MarkPress {
 
 	static function assetsDir() {
 		return plugins_url("/markpress/assets");
+	}
+
+	function loginIfNotLoggedIn() {
+		add_action('parse_request', array($this, 'redirectToLogin'), 1);
+	}
+
+	function redirectToLogin() {
+		is_user_logged_in() || auth_redirect();
 	}
 }
