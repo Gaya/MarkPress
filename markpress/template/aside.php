@@ -3,7 +3,8 @@
 	$entries = get_posts(array(
 		'posts_per_page'   => 50,
 		'orderby'          => 'post_date',
-		'order'            => 'DESC'
+		'order'            => 'DESC',
+		'post_type'        => 'mp-note'
 	));
 	?>
 
