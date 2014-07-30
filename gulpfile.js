@@ -33,6 +33,15 @@ gulp.task('sass', function() {
             console.log(err.toString());
             this.emit('end');
         }))
-        .pipe(gulp.dest(config.dist + '/css/'))
-        .pipe(browserSync.reload({stream:true}));
+        .pipe(gulp.dest(config.dist + '/css/'));
+});
+
+gulp.task('watch', ['browserify', 'sass'], function () {
+    'use strict';
+
+    //js
+    gulp.watch(config.src + "/js/**/*.js", ['browserify']);
+
+    //sass
+    gulp.watch(config.src + "/sass/**/*.scss", ['sass']);
 });

@@ -46,7 +46,7 @@ class MarkPress {
 	}
 
 	function loadAssets() {
-		wp_enqueue_script("MarkPress", plugins_url('markpress/assets/js/markpress.js', $this->plugin_dir), array("jquery", "PageDown"), 1, false );
+		wp_enqueue_script("MarkPress", plugins_url('markpress/assets/js/markpress.js', $this->plugin_dir), array(), 1, true );
 		wp_enqueue_style("PageDown", plugins_url('markpress/assets/css/style.css', $this->plugin_dir), array(), 1);
 	}
 

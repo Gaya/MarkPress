@@ -1,33 +1,44 @@
-(function ($) {
-    var converter = new Markdown.Converter();
+var PageDown = require("pagedown");
+var converter = new PageDown.Converter();
 
-    $(document).ready(function () {
-        $("#markpress-editor").on("input", function () {
-            updatePreview();
-        }).on("keydown", function (e) {
-            if (e.keyCode === 9) { // tab was pressed
+function MarkPress() {
+    'use strict';
+    this.editor = document.querySelector("#markpress-editor");
+    this.preview = document.querySelector("#markpress-preview");
 
-                // get caret position/selection
-                var val = this.value,
-                    start = this.selectionStart,
-                    end = this.selectionEnd;
+    this.bindKeydown();
+    this.updatePreview();
+}
 
-                // set textarea value to: text before caret + tab + text after caret
-                this.value = val.substring(0, start) + '\t' + val.substring(end);
+MarkPress.prototype.bindKeydown = function () {
+    'use strict';
 
-                // put caret at right position again
-                this.selectionStart = this.selectionEnd = start + 1;
+    this.editor.addEventListener("keydown", function (e) {
+        if (e.keyCode === 9) { // tab was pressed
+            // get caret position/selection
+            var val = this.value,
+                start = this.selectionStart,
+                end = this.selectionEnd;
 
-                // prevent the focus lose
-                return false;
-            }
-        });
+            // set textarea value to: text before caret + tab + text after caret
+            this.value = val.substring(0, start) + '\t' + val.substring(end);
 
-        updatePreview();
-    });
+            // put caret at right position again
+            this.selectionStart = this.selectionEnd = start + 1;
 
-    function updatePreview() {
-        var content = $("#markpress-editor").val();
-        $("#markpress-preview").html(converter.makeHtml(content));
-    }
-})(jQuery);
+            // prevent the focus lose
+            return false;
+        }
+    }.bind(this.editor), false);
+
+    this.editor.addEventListener("input", function (e) {
+        this.updatePreview();
+    }.bind(this), false);
+};
+
+MarkPress.prototype.updatePreview = function () {
+    'use strict';
+    this.preview.innerHTML = converter.makeHtml(this.editor.value);
+};
+
+var MP = new MarkPress();
