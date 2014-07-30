@@ -296,7 +296,7 @@ html, body {
 #entries {
   float: left;
   width: 70%;
-  padding: 1.3rem 2%;
+  padding: 1.3rem 1%;
   color: #dddddd;
   overflow: auto;
   margin-left: -70%;
