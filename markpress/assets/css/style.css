@@ -296,7 +296,7 @@ html, body {
 #entries {
   float: left;
   width: 70%;
-  padding: 1.3rem 1%;
+  padding: 1.3rem 2%;
   color: #dddddd;
   overflow: auto;
   margin-left: -70%;
@@ -307,6 +307,7 @@ html, body {
 @media screen and (min-width: 768px) {
   #entries {
     width: 20%;
+    padding: 1.3rem 1%;
   }
 }
 #entries h3 {

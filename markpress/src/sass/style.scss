@@ -266,7 +266,7 @@ html, body {
 #entries {
     float: left;
     width: 70%;
-    padding: rhythm(0.5) 1%;
+    padding: rhythm(0.5) 2%;
     color: $aside-color;
     overflow: auto;
     margin-left: -70%;
@@ -274,6 +274,7 @@ html, body {
 
     @include media($desktop) {
         width: 20%;
+        padding: rhythm(0.5) 1%;
     }
 
     h3 {
