@@ -2,6 +2,13 @@
 
 @import "libs/reset";
 @import "libs/vertical-rhythm";
+@import "libs/bourbon/bourbon";
+@import "libs/neat/neat-helpers";
+@import "libs/neat/neat";
+
+$mobile:            new-breakpoint(max-width 768px 4);
+$desktop:           new-breakpoint(min-width 768px 10);
+
 
 * { box-sizing: border-box; font-family: 'PT Serif', serif; } //FTW!
 
@@ -15,23 +22,52 @@ html, body {
     font-family: 'PT Serif', serif;
 }
 
+#actions {
+    height: rhythm(2);
+    padding: 0 2%;
+
+    button {
+        border: 0;
+        background: $editor-bg;
+        padding: 0 10px;
+        margin: rhythm(0.35) 10px 0 0;
+        height: rhythm(1.4);
+        cursor: pointer;
+        display: block;
+        float: left;
+        outline: none;
+
+        &.save {
+            float: right;
+            margin-right: 0;
+        }
+
+        &:hover {
+            background: darken($editor-bg, 10);
+        }
+    }
+}
+
 #primary {
     height: 100%;
     position: fixed;
     left: 0%;
     width: 100%;
     background: $preview-bg;
+
+    @include transition(width $anim-speed, left $anim-speed);
 }
 
 .markpress-editor {
     &__preview {
-        width: 50%;
+        width: 100%;
         height: 100%;
         position: absolute;
         left: auto;
         right: 0;
         overflow: auto;
         padding: 0 2%;
+        top: 100%;
     }
 
     &__content {
@@ -39,6 +75,7 @@ html, body {
         padding: 0;
         right: auto;
         left: 0;
+        top: 0;
         padding-top: 96px;
 
         &__title {
@@ -84,6 +121,17 @@ html, body {
                 color: darken($editor-bg, 30);
                 text-align: center;
             }
+        }
+    }
+
+    @include media($desktop) {
+        &__preview {
+            top: 0;
+            width: 50%;
+        }
+
+        &__content {
+            width: 50%;
         }
     }
 }
@@ -212,6 +260,7 @@ html, body {
     color: $aside-color;
     overflow: auto;
     margin-left: -20%;
+    @include transition(margin-left $anim-speed);
 
     h3 {
         font-weight: normal;
@@ -226,5 +275,16 @@ html, body {
             color: $editor-bg;
             text-decoration: underline;
         }
+    }
+}
+
+.menu-open {
+    #entries {
+        margin-left: 0;
+    }
+
+    #primary {
+        width: 80%;
+        left: 20%;
     }
 }
