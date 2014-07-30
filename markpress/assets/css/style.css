@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, #markpress-preview h2, #markpress-preview h3, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, #markpress-preview ol, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -15,7 +15,7 @@ body {
   line-height: inherit;
 }
 
-ol, ul {
+ol, ul, #markpress-preview ol {
   list-style: none;
 }
 
@@ -152,16 +152,73 @@ html, body {
 #markpress-preview {
   color: #111111;
 }
-#markpress-preview h1 {
+#markpress-preview h1, #markpress-preview h2, #markpress-preview h3 {
   font-size: 42px;
   font-size: 4.2rem;
   line-height: 78px;
   line-height: 7.8rem;
+  font-weight: bold;
   border-bottom: 1px solid #dddddd;
   margin-bottom: 2.5rem;
 }
-#markpress-preview p {
+#markpress-preview h2 {
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 52px;
+  line-height: 5.2rem;
+}
+#markpress-preview h3 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 52px;
+  line-height: 5.2rem;
+}
+#markpress-preview em {
+  font-style: italic;
+}
+#markpress-preview strong {
+  font-weight: bold;
+}
+#markpress-preview p, #markpress-preview ul, #markpress-preview ol, #markpress-preview blockquote, #markpress-preview pre {
   margin-bottom: 2.6rem;
+}
+#markpress-preview p:last-child, #markpress-preview ul:last-child, #markpress-preview ol:last-child, #markpress-preview blockquote:last-child, #markpress-preview pre:last-child {
+  margin-bottom: 0;
+}
+#markpress-preview code {
+  font-family: 'PT Mono';
+  display: inline-block;
+  background: #f6f6f6;
+  border: 1px solid #dddddd;
+  padding: 0 6px;
+  margin: -2px 0 -2px 0;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 26px;
+  line-height: 2.6rem;
+}
+#markpress-preview pre {
+  background: #f6f6f6;
+  border: 1px solid #dddddd;
+  padding: 1.2rem 6px;
+}
+#markpress-preview pre code {
+  display: block;
+  width: 100%;
+  border: 0px;
+  margin: 0;
+}
+#markpress-preview ul, #markpress-preview ol {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+#markpress-preview ol {
+  padding-left: 24px;
+  list-style-type: decimal;
+}
+#markpress-preview blockquote {
+  padding: 2.5rem;
+  border: 1px solid #dddddd;
 }
 
 #entries {
