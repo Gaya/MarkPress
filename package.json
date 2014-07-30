@@ -1,0 +1,28 @@
+{
+  "name": "MarkPress",
+  "version": "0.1.0",
+  "description": "Quick Markdown notes tool for WordPress",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gaya/MarkPress.git"
+  },
+  "keywords": [
+    "markdown",
+    "notes",
+    "wordpress",
+    "pagedown"
+  ],
+  "author": "Gaya Kessler",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/Gaya/MarkPress/issues"
+  },
+  "homepage": "https://github.com/Gaya/MarkPress",
+  "devDependencies": {
+    "browserify": "^5.9.1",
+    "gulp": "^3.8.6",
+    "gulp-ruby-sass": "^0.7.1",
+    "pagedown": "^1.1.0",
+    "vinyl-source-stream": "^0.1.1"
+  }
+}

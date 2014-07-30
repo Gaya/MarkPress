@@ -1,5 +1,6 @@
 .idea/
 www/
+node_modules/
 
 vagrant/.vagrant
 vagrant/cgi-bin
