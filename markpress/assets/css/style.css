@@ -1,11 +1,70 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: inherit;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+ * Vertical Rhythmn in Sass with helpful mixins and helpers
+ * Author:  Gaya Kessler
+ * Version: 0.0.1
+ * Date:    2014-05-18
+ */
 * {
   box-sizing: border-box;
+  font-family: 'PT Serif', serif;
+}
+
+html {
+  font-size: 62.5%;
+  /* Sets up the Base 10 stuff */
+}
+
+html body, html input, html textarea, html button {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
 }
 
 html, body {
+  -webkit-text-size-adjust: 100%;
   min-height: 100%;
   height: 100%;
-  background: #0D0D0D;
+  background: #0d0d0d;
+  font-family: 'PT Serif', serif;
 }
 
 #primary {
@@ -13,7 +72,7 @@ html, body {
   position: fixed;
   left: 20%;
   width: 80%;
-  background: #fff;
+  background: white;
 }
 
 .markpress-editor__preview, .markpress-editor__content {
@@ -40,6 +99,7 @@ html, body {
   left: 0;
 }
 .markpress-editor__content__title input, .markpress-editor__content__tags input {
+  color: #111111;
   display: block;
   width: 100%;
   height: 100%;
@@ -50,11 +110,14 @@ html, body {
   background: transparent;
 }
 .markpress-editor__content__tags {
-  background: #dcdcdc;
+  background: #e2e2e2;
   top: 48px;
 }
 .markpress-editor__content__tags input {
   font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 26px;
+  line-height: 2.6rem;
   padding: 0 2% 0 6%;
 }
 .markpress-editor__content__tags:before {
@@ -66,25 +129,46 @@ html, body {
   left: 0;
   top: 0;
   font-size: 20px;
-  color: #9E9E9E;
+  color: #a3a3a3;
   text-align: center;
 }
 
 #markpress-editor {
+  color: #111111;
   border: 0;
   outline: none;
   background: #efefef;
-  padding: 20px 2%;
+  padding: 2.6rem 2%;
   height: 100%;
   width: 100%;
   display: block;
+  font-family: 'PT Mono';
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 26px;
+  line-height: 2.6rem;
+}
+
+#markpress-preview {
+  color: #111111;
+}
+#markpress-preview h1 {
+  font-size: 42px;
+  font-size: 4.2rem;
+  line-height: 78px;
+  line-height: 7.8rem;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 2.5rem;
+}
+#markpress-preview p {
+  margin-bottom: 2.6rem;
 }
 
 #entries {
   float: left;
   width: 20%;
   padding: 0 2%;
-  color: #ddd;
+  color: #dddddd;
 }
 #entries h3 {
   font-weight: normal;

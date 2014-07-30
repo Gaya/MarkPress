@@ -7,8 +7,6 @@ class MarkPress {
 
 		if ( ! is_admin() ) {
 			$this->killTheTheme();
-//			$this->loadPageDown();
-			$this->loadBootstrap();
 			$this->loadAssets();
 		}
 	}
@@ -36,18 +34,9 @@ class MarkPress {
 		return plugins_url('markpress', $this->plugin_dir);
 	}
 
-	function loadPageDown() {
-		wp_enqueue_script("PageDown", plugins_url('markpress/assets/js/Markdown.Converter.js', $this->plugin_dir), array("jquery"), 2.2, false );
-	}
-
-	function loadBootstrap() {
-		wp_enqueue_script("Bootstrap", plugins_url('markpress/assets/bootstrap/js/bootstrap.min.js', $this->plugin_dir), array("jquery"), 3.2, false );
-		wp_enqueue_style("Bootstrap", plugins_url('markpress/assets/bootstrap/css/bootstrap.min.css', $this->plugin_dir), array(), 3.2);
-	}
-
 	function loadAssets() {
 		wp_enqueue_script("MarkPress", plugins_url('markpress/assets/js/markpress.js', $this->plugin_dir), array(), 1, true );
-		wp_enqueue_style("PageDown", plugins_url('markpress/assets/css/style.css', $this->plugin_dir), array(), 1);
+		wp_enqueue_style("MarkPress", plugins_url('markpress/assets/css/style.css', $this->plugin_dir), array(), 1);
 	}
 
 	static function assetsDir() {
