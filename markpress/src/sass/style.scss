@@ -26,6 +26,10 @@ html, body {
     height: rhythm(2);
     padding: 0 2%;
 
+    @include media($desktop) {
+        padding: 0 1%;
+    }
+
     button {
         border: 0;
         background: $editor-bg;
@@ -40,6 +44,12 @@ html, body {
         &.save {
             float: right;
             margin-right: 0;
+        }
+
+        &.mode {
+            @include media($desktop) {
+                display: none;
+            }
         }
 
         &:hover {

@@ -77,6 +77,11 @@ html, body {
   height: 5.2rem;
   padding: 0 2%;
 }
+@media screen and (min-width: 768px) {
+  #actions {
+    padding: 0 1%;
+  }
+}
 #actions button {
   border: 0;
   background: #efefef;
@@ -91,6 +96,11 @@ html, body {
 #actions button.save {
   float: right;
   margin-right: 0;
+}
+@media screen and (min-width: 768px) {
+  #actions button.mode {
+    display: none;
+  }
 }
 #actions button:hover {
   background: #d5d5d5;
