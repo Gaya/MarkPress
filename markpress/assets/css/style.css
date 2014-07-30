@@ -73,9 +73,22 @@ html, body {
   font-family: 'PT Serif', serif;
 }
 
+#markpress {
+  padding-top: 5.2rem;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
 #actions {
   height: 5.2rem;
   padding: 0 2%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   #actions {
@@ -164,6 +177,11 @@ html, body {
   font-size: 20px;
   color: #a3a3a3;
   text-align: center;
+}
+.markpress-editor__content__save {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 @media screen and (min-width: 768px) {
   .markpress-editor__preview, .markpress-editor__content {

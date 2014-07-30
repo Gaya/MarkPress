@@ -22,9 +22,22 @@ html, body {
     font-family: 'PT Serif', serif;
 }
 
+#markpress {
+    padding-top: rhythm(2);
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
 #actions {
     height: rhythm(2);
     padding: 0 2%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 
     @include media($desktop) {
         padding: 0 1%;
@@ -121,6 +134,12 @@ html, body {
                 color: darken($editor-bg, 30);
                 text-align: center;
             }
+        }
+
+        &__save {
+            position: absolute;
+            top: 10px;
+            right: 10px;
         }
     }
 

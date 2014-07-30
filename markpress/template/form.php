@@ -20,5 +20,7 @@
 		?>" />
 	</article>
 
+	<input class="markpress-editor__content__save" type="submit" value="save" />
+
 	<textarea id="markpress-editor"><?php $content = get_the_content(); echo strip_tags($content); ?></textarea>
 </form>
