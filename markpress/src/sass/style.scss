@@ -18,8 +18,8 @@ html, body {
 #primary {
     height: 100%;
     position: fixed;
-    left: 20%;
-    width: 80%;
+    left: 0%;
+    width: 100%;
     background: $preview-bg;
 }
 
@@ -183,16 +183,48 @@ html, body {
         padding: rhythm-border(1, 1px);
         border: 1px solid $border-color;
     }
+
+    a {
+        color: $link;
+        text-decoration: underline;
+
+        &:hover {
+            color: $editor-color;
+        }
+    }
+
+    hr {
+        border: 0;
+        height: 1px;
+        background-color: $border-color;
+        margin: 0 0 rhythm-border(1, 1px) 0;
+    }
+
+    img {
+        max-width: 100%;
+    }
 }
 
 #entries {
     float: left;
     width: 20%;
-    padding: 0 2%;
+    padding: rhythm(0.5) 2%;
     color: $aside-color;
+    overflow: auto;
+    margin-left: -20%;
 
     h3 {
         font-weight: normal;
         font-size: 16px;
+    }
+
+    a {
+        color: $preview-bg;
+        text-decoration: none;
+
+        &:hover {
+            color: $editor-bg;
+            text-decoration: underline;
+        }
     }
 }

@@ -1,5 +1,15 @@
 var PageDown = require("pagedown");
 var marked = require('marked');
+marked.setOptions({
+    renderer: new marked.Renderer(),
+    gfm: true,
+    tables: true,
+    breaks: true,
+    pedantic: true,
+    sanitize: true,
+    smartLists: true,
+    smartypants: true
+});
 
 function MarkPress() {
     'use strict';
