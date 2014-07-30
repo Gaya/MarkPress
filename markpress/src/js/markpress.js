@@ -1,4 +1,3 @@
-var PageDown = require("pagedown");
 var marked = require('marked');
 marked.setOptions({
     renderer: new marked.Renderer(),
@@ -15,9 +14,13 @@ function MarkPress() {
     'use strict';
     this.editor = document.querySelector("#markpress-editor");
     this.preview = document.querySelector("#markpress-preview");
+    this.entriesButton = document.querySelector("#actions .entries");
+    this.modeButton = document.querySelector("#actions .mode");
+    this.saveButton = document.querySelector("#actions .save");
 
     this.bindKeydown();
     this.updatePreview();
+    this.bindButtons();
 }
 
 MarkPress.prototype.bindKeydown = function () {
@@ -44,6 +47,10 @@ MarkPress.prototype.bindKeydown = function () {
     this.editor.addEventListener("input", function (e) {
         this.updatePreview();
     }.bind(this), false);
+
+    this.editor.addEventListener("focus", function (e) {
+        document.body.classList.remove("menu-open");
+    }, false);
 };
 
 MarkPress.prototype.updatePreview = function () {
@@ -54,6 +61,13 @@ MarkPress.prototype.updatePreview = function () {
 MarkPress.prototype.markDownToHTML = function (md) {
     'use strict';
     return marked(md);
+};
+
+MarkPress.prototype.bindButtons = function () {
+    'use strict';
+    this.entriesButton.addEventListener("click", function () {
+        document.body.classList.toggle("menu-open");
+    }, false);
 };
 
 var MP = new MarkPress();
