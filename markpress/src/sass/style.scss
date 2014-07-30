@@ -30,10 +30,15 @@ html, body {
         padding: 0;
         right: auto;
         left: 0;
+        padding-top: 96px;
 
         &__title {
-            height: 5%;
-            background: #DCDCDC;
+            height: 48px;
+            width: 100%;
+            background: #efefef;
+            position: absolute;
+            top: 0;
+            left: 0;
 
             input {
                 display: block;
@@ -49,10 +54,25 @@ html, body {
 
         &__tags {
             @extend .markpress-editor__content__title;
-            background: #AAAAAA;
+            background: #dcdcdc;
+            top: 48px;
 
             input {
                 font-size: 14px;
+                padding: 0 2% 0 6%;
+            }
+
+            &:before {
+                content: "#";
+                display: block;
+                position: absolute;
+                line-height: 48px;
+                width: 6%;
+                left: 0;
+                top: 0;
+                font-size: 20px;
+                color: #9E9E9E;
+                text-align: center;
             }
         }
     }
@@ -63,7 +83,7 @@ html, body {
     outline: none;
     background: #efefef;
     padding: 20px 2%;
-    height: 90%;
+    height: 100%;
     width: 100%;
     display: block;
 }
