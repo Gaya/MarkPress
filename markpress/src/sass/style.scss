@@ -163,6 +163,14 @@ html, body {
     ul {
         list-style-type: disc;
         padding-left: 20px;
+
+        li {
+            ul, ol {
+                &:last-child {
+                    margin-bottom: rhythm(1);
+                }
+            }
+        }
     }
 
     ol {

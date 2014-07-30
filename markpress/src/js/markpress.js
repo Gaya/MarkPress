@@ -1,5 +1,5 @@
 var PageDown = require("pagedown");
-var converter = new PageDown.Converter();
+var marked = require('marked');
 
 function MarkPress() {
     'use strict';
@@ -38,7 +38,12 @@ MarkPress.prototype.bindKeydown = function () {
 
 MarkPress.prototype.updatePreview = function () {
     'use strict';
-    this.preview.innerHTML = converter.makeHtml(this.editor.value);
+    this.preview.innerHTML = this.markDownToHTML(this.editor.value);
+};
+
+MarkPress.prototype.markDownToHTML = function (md) {
+    'use strict';
+    return marked(md);
 };
 
 var MP = new MarkPress();

@@ -212,6 +212,9 @@ html, body {
   list-style-type: disc;
   padding-left: 20px;
 }
+#markpress-preview ul li ul:last-child, #markpress-preview ol li ul:last-child, #markpress-preview ul li ol:last-child, #markpress-preview ol li ol:last-child, #markpress-preview ul li ol:last-child, #markpress-preview ol li ol:last-child {
+  margin-bottom: 2.6rem;
+}
 #markpress-preview ol {
   padding-left: 24px;
   list-style-type: decimal;
