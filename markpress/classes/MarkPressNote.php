@@ -7,13 +7,18 @@ class MarkPressNote {
 
 	function savePost() {
 		$post = array(
-			'ID' => $this->id,
 			'post_title' => $this->title,
 			'post_content' => $this->content,
-			'tags_input' => $this->tags
+			'post_status' => "publish",
+			'tags_input' => $this->tags,
+			'post_type' => "mp-note"
 		);
 
-		wp_update_post( $post );
+		if (is_numeric($this->id)) {
+			$post['ID'] = $this->id;
+		}
+
+		wp_insert_post( $post );
 	}
 
 	function setTitle($title) {

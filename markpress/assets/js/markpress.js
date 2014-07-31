@@ -122,6 +122,10 @@ Note.prototype.setEditing = function () {
 
 Note.prototype.setValues = function () {
     'use strict';
+    if (this.titleElement.value.length === 0) {
+        this.titleElement.value = this.getDateTitle();
+    }
+
     this.id = this.idElement.value;
     this.title = this.titleElement.value;
     this.tags = this.tagsElement.value;
@@ -152,8 +156,11 @@ Note.prototype.savePost = function () {
             'wp-note-content': this.content,
             'wp-note-submit': true
         })
+        .set('Accept', 'application/json')
         .end(function(res){
-            if (res.serverError === true) {
+            var resObj = JSON.parse(res.text);
+
+            if (resObj.saved !== true) {
                 alert("Something is broken, sorry!");
             }
 
@@ -167,10 +174,21 @@ Note.prototype.savePost = function () {
 Note.prototype.newPost = function () {
     'use strict';
     this.idElement.value = null;
-    this.titleElement.value = "";
+    this.titleElement.value = this.getDateTitle();
     this.tagsElement.value = "";
     this.contentElement.value = "";
+    this.setValues();
     this.updatePreview();
+};
+
+Note.prototype.getDateTitle = function () {
+    'use strict';
+    var currentDate = new Date();
+    var day = currentDate.getDate();
+    var month = currentDate.getMonth() + 1;
+    var year = currentDate.getFullYear();
+
+    return day + " / " + month + " / " + year;
 };
 
 module.exports = Note;
