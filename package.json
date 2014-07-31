@@ -24,6 +24,7 @@
     "gulp-ruby-sass": "^0.7.1",
     "gulp-uglify": "^0.3.1",
     "marked": "^0.3.2",
+    "superagent": "^0.18.2",
     "vinyl-source-stream": "^0.1.1"
   }
 }

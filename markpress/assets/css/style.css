@@ -89,6 +89,8 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 666;
+  background: #0d0d0d;
 }
 @media screen and (min-width: 768px) {
   #actions {
@@ -134,7 +136,7 @@ html, body {
   left: auto;
   right: 0;
   overflow: auto;
-  padding: 0 2%;
+  padding: 7.8rem 2% 2.6rem 2%;
   top: 100%;
 }
 .markpress-editor__content {
@@ -142,14 +144,14 @@ html, body {
   right: auto;
   left: 0;
   top: 0;
-  padding-top: 96px;
+  padding-top: 15.6rem;
 }
 .markpress-editor__content__title, .markpress-editor__content__tags {
-  height: 48px;
+  height: 5.2rem;
   width: 100%;
   background: #efefef;
   position: absolute;
-  top: 0;
+  top: 5.2rem;
   left: 0;
 }
 .markpress-editor__content__title input, .markpress-editor__content__tags input {
@@ -165,7 +167,7 @@ html, body {
 }
 .markpress-editor__content__tags {
   background: #e2e2e2;
-  top: 48px;
+  top: 10.4rem;
 }
 .markpress-editor__content__tags input {
   font-size: 14px;
@@ -187,9 +189,7 @@ html, body {
   text-align: center;
 }
 .markpress-editor__content__save {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .markpress-editor__preview, .markpress-editor__content {
@@ -311,9 +311,11 @@ html, body {
 #primary {
   height: 100%;
   position: fixed;
+  top: 0;
   left: 0%;
   width: 100%;
   background: white;
+  z-index: 1;
   -webkit-transition: width 150ms, left 150ms;
   -moz-transition: width 150ms, left 150ms;
   transition: width 150ms, left 150ms;

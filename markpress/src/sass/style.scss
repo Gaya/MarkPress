@@ -38,6 +38,8 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 666;
+    background: $aside-bg;
 
     @include media($desktop) {
         padding: 0 1%;
@@ -89,7 +91,7 @@ html, body {
         left: auto;
         right: 0;
         overflow: auto;
-        padding: 0 2%;
+        padding: rhythm(3) 2% rhythm(1) 2%;
         top: 100%;
     }
 
@@ -99,14 +101,14 @@ html, body {
         right: auto;
         left: 0;
         top: 0;
-        padding-top: 96px;
+        padding-top: rhythm(6);
 
         &__title {
-            height: 48px;
+            height: rhythm(2);
             width: 100%;
             background: $editor-bg;
             position: absolute;
-            top: 0;
+            top: rhythm(2);
             left: 0;
 
             input {
@@ -125,7 +127,7 @@ html, body {
         &__tags {
             @extend .markpress-editor__content__title;
             background: darken($editor-bg, 5);
-            top: 48px;
+            top: rhythm(4);
 
             input {
                 @include change-font-size($smaller-font-size);
@@ -147,9 +149,7 @@ html, body {
         }
 
         &__save {
-            position: absolute;
-            top: 10px;
-            right: 10px;
+            display: none;
         }
     }
 
@@ -285,9 +285,11 @@ html, body {
 #primary {
     height: 100%;
     position: fixed;
+    top: 0;
     left: 0%;
     width: 100%;
     background: $preview-bg;
+    z-index: 1;
 
     @include transition(width $anim-speed, left $anim-speed);
 }
