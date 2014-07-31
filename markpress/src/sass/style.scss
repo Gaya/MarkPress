@@ -9,7 +9,6 @@
 $mobile:            new-breakpoint(max-width 768px 4);
 $desktop:           new-breakpoint(min-width 768px 10);
 
-
 * { box-sizing: border-box; font-family: 'PT Serif', serif; } //FTW!
 
 @include establish-baseline;

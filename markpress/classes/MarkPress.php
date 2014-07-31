@@ -22,6 +22,7 @@ class MarkPress {
 	}
 
 	function killTheTheme() {
+        add_filter('show_admin_bar', '__return_false');
 		add_filter('template_include', array($this, 'catchThemeInclude'), 99);
 		add_filter('template_directory', array($this, 'catchTemplateFolder'), 99);
 		add_filter('stylesheet_directory', array($this, 'catchTemplateFolder'), 99);
