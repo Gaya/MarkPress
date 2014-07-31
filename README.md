@@ -18,9 +18,9 @@ I tried to make development as painless as possible, so I added a Vagrant box an
 1. [Download and install Vagrant](http://www.vagrantup.com/downloads.html)
 2. [Download and install Node.js](http://nodejs.org/download/)
 3. Install the Sass gem (in the terminal):
-    gem install sass
+`gem install sass`
 4. Install Gulp
-    npm install -g gulp
+`npm install -g gulp`
 
 ###Running the webserver
 1. Clone this repository
