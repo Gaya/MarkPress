@@ -5,18 +5,33 @@ Write short Markdown journal notes in WordPress. Works when activated.
 
 More soon.
 
-##Help developing
+##How to start helping the development
+I tried to make development as painless as possible, so I added a Vagrant box and a Gulp automated workflow.
 
-1. Install Vagrant
-2. Install Node.js
-3. Create a folder in the root called `www`
-4. Put a WordPress install in `www`
-5. Use the following database credentials:
+###Tools you need
+1. [Download and install Vagrant](http://www.vagrantup.com/downloads.html)
+2. [Download and install Node.js](http://nodejs.org/download/)
+3. Install the Sass gem (in the terminal):
+    gem install sass
+4. Install Gulp
+    npm install -g gulp
+
+###Running the webserver
+1. Clone this repository
+    git clone https://github.com/Gaya/MarkPress.git
+2. Create a folder in the root called `www`
+3. Put [a WordPress install](http://wordpress.org/latest.zip) in `www`
+4. Rename `wp-config-sample.php` to `wp-config.php` and change the database credentials to:
+	- Database: `wordpress`
 	- User: `root`
 	- Password: `root`
-	- Database: `wordpress`
-6. Go to the `vagarant` folder in the terminal
-7. Run: `vagrant up`
-8. Put `192.168.56.125 markdown.dev`  in your hosts file
-9. To start watching Sass and JavaScript run `gulp watch` in the terminal
-10. The site can be found at `markdown.dev` in the webbrowser
+5. Go to the `vagrant/` folder in the terminal
+6. Run: `vagrant up`
+7. Put `192.168.56.125 markdown.dev` in your hosts file
+8. Go to [http://markpress.dev](http://markpress.dev) in your browser
+9. Go through WordPress setup
+10. Activate the MarkPress plugin in [http://markpress.dev/wp-admin/](http://markpress.dev/wp-admin/)
+
+###Front-end Development
+1. Run `npm install` in the root of the project
+2. To start watching Sass and JavaScript run `gulp watch` in the terminal
