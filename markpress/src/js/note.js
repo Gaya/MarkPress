@@ -71,6 +71,12 @@ Note.prototype.setEditing = function () {
     }
 };
 
+Note.prototype.setPostId = function (id) {
+    'use strict';
+    this.id = id;
+    this.idElement.value = id;
+};
+
 Note.prototype.setValues = function () {
     'use strict';
     if (this.titleElement.value.length === 0) {
@@ -115,6 +121,7 @@ Note.prototype.savePost = function () {
                 alert("Something is broken, sorry!");
             }
 
+            this.setPostId(resObj.post_id);
             this.editing = false;
             this.saving = false;
 

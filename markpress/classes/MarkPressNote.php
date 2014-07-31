@@ -18,7 +18,7 @@ class MarkPressNote {
 			$post['ID'] = $this->id;
 		}
 
-		wp_insert_post( $post );
+		return wp_insert_post( $post );
 	}
 
 	function setTitle($title) {

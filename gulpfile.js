@@ -34,7 +34,7 @@ gulp.task('sass', function() {
     'use strict';
     return gulp.src(config.src + '/sass/style.scss')
         .pipe(sass({
-            style: 'expanded',
+            style: 'compressed',
             loadPath: __dirname + '/' + config.src + '/sass/'
         }).on('error', function (err) {
             console.log(err.toString());
