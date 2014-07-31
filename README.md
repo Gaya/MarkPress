@@ -1,9 +1,15 @@
 MarkPress
 =========
 
-Write short Markdown journal notes in WordPress. Works when activated.
+Write Markdown journal notes using WordPress.
 
-More soon.
+##What does it do?
+Takes over your WordPress install on activation and enables the user to quickly write MarkDown powered journal notes.
+
+- Automatically saves
+- Quickly add new notes
+- Works on mobile
+- Is plain awesome
 
 ##How to start helping the development
 I tried to make development as painless as possible, so I added a Vagrant box and a Gulp automated workflow.
