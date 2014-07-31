@@ -118,6 +118,14 @@ html, body {
 #actions button:hover {
   background: #d5d5d5;
 }
+#actions button.new {
+  padding: 0;
+  width: 3.64rem;
+  background: #8a9b0f;
+}
+#actions button.new:hover {
+  background: #616c0b;
+}
 
 .markpress-editor__preview, .markpress-editor__content {
   width: 100%;
@@ -284,7 +292,7 @@ html, body {
   border: 1px solid #dddddd;
 }
 #markpress-preview a {
-  color: #302eb6;
+  color: #bd1550;
   text-decoration: underline;
 }
 #markpress-preview a:hover {

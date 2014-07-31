@@ -68,6 +68,16 @@ html, body {
         &:hover {
             background: darken($editor-bg, 10);
         }
+
+        &.new {
+            padding: 0;
+            width: rhythm(1.4);
+            background: $highlight;
+
+            &:hover {
+                background: darken($highlight, 10);
+            }
+        }
     }
 }
 
