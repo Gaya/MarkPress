@@ -1,7 +1,9 @@
 MarkPress
 =========
 
-Write short Markdown notes in WordPress
+Write short Markdown journal notes in WordPress. Works when activated.
+
+More soon.
 
 ##Help developing
 

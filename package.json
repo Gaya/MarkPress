@@ -1,7 +1,7 @@
 {
   "name": "MarkPress",
   "version": "0.1.0",
-  "description": "Quick Markdown notes tool for WordPress",
+  "description": "Quick Markdown journal tool for WordPress",
   "repository": {
     "type": "git",
     "url": "https://github.com/Gaya/MarkPress.git"
@@ -10,7 +10,8 @@
     "markdown",
     "notes",
     "wordpress",
-    "pagedown"
+    "marked",
+    "journal"
   ],
   "author": "Gaya Kessler",
   "license": "GPL",
