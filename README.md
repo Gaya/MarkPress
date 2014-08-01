@@ -33,7 +33,7 @@ I tried to make development as painless as possible, so I added a Vagrant box an
 	- Password: `root`
 5. Go to the `vagrant/` folder in the terminal
 6. Run: `vagrant up`
-7. Put `192.168.56.125 markdown.dev` in your hosts file
+7. Put `192.168.56.125 markpress.dev` in your hosts file
 8. Go to [http://markpress.dev](http://markpress.dev) in your browser
 9. Go through WordPress setup
 10. Activate the MarkPress plugin in [http://markpress.dev/wp-admin/](http://markpress.dev/wp-admin/)
