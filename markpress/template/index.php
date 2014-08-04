@@ -3,7 +3,6 @@
 	<section id="markpress">
 		<section id="actions">
 			<button class="entries">entries</button>
-			<button class="mode">view mode</button>
 			<button class="new">+</button>
 			<button class="save">save</button>
 		</section>
