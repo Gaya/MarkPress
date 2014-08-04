@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: Gaya Kessler
+Contributors: gayadesign
 Donate link: http://gaya.ninja/
 Tags: markdown, journal, notes
 Requires at least: 3.0.1
