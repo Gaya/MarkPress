@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: gayadesign
 Donate link: http://gaya.ninja/
-Tags: markdown, journal, notes
+Tags: MarkPress, Markdown, Mark down, Journal, notes, ajax
 Requires at least: 3.0.1
 Tested up to: 3.9.1
 Stable tag: 0.1.1
@@ -19,6 +19,7 @@ Write Markdown journal notes using WordPress.
 ##What does it do?
 Takes over your WordPress install on activation and enables the user to quickly write MarkDown powered journal notes.
 
+- Type Markdown on the left, see styled output on the right
 - Automatically saves
 - Quickly add new notes
 - Works on mobile
@@ -42,6 +43,9 @@ Want to help? Great! There is a GitHub repo:
 [https://github.com/Gaya/MarkPress](https://github.com/Gaya/MarkPress)
 
 == Screenshots ==
+
+1. Markdown editor and styled content
+2. The editor on a mobile display
 
 == Changelog ==
 
