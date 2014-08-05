@@ -17,20 +17,26 @@ MarkPress.prototype.bindKeydown = function () {
     this.editor.addEventListener("keydown", function (e) {
         if (e.keyCode === 9) { // tab was pressed
             // get caret position/selection
-            var val = this.value,
-                start = this.selectionStart,
-                end = this.selectionEnd;
+            var val = this.editor.value,
+                start = this.editor.selectionStart,
+                end = this.editor.selectionEnd;
 
             // set textarea value to: text before caret + tab + text after caret
-            this.value = val.substring(0, start) + '\t' + val.substring(end);
+            this.editor.value = val.substring(0, start) + '\t' + val.substring(end);
 
             // put caret at right position again
-            this.selectionStart = this.selectionEnd = start + 1;
+            this.editor.selectionStart = this.editor.selectionEnd = start + 1;
 
             // prevent the focus lose
             return false;
         }
-    }.bind(this.editor), false);
+
+        if (e.metaKey && e.keyCode === 83) {
+            e.preventDefault();
+            this.note.savePost();
+            return false;
+        }
+    }.bind(this), false);
 
     this.editor.addEventListener("focus", function (e) {
         document.body.classList.remove("menu-open");
