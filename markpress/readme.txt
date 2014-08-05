@@ -15,13 +15,15 @@ Takes over your WordPress install on activation and enables the user to quickly 
 Write Markdown journal notes using WordPress.
 
 = What does it do? =
-Takes over your WordPress install on activation and enables the user to quickly write MarkDown powered journal notes.
 
-- Type Markdown on the left, see styled output on the right
+- Takes over your WordPress install on activation
+- Enables the user to quickly write Markdown powered journal notes *without* using `wp-admin`
+- Type Markdown on the left, see styled output *live updated* on the right
+- Only works when user is logged in
 - Automatically saves
 - Quickly add new notes
 - Works on mobile
-- Is plain awesome
+- *Is plain awesome*
 
 = Also on GitHub =
 
