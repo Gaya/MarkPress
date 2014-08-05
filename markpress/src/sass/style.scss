@@ -21,7 +21,7 @@ html, body {
     font-family: 'PT Serif', serif;
 }
 
-#markpress-container {
+.markpress-container {
     padding-top: rhythm(2);
     position: relative;
     height: 100%;
@@ -30,7 +30,7 @@ html, body {
     left: 0;
 }
 
-#actions {
+.markpress-actions {
     height: rhythm(2);
     padding: 0 2%;
     position: absolute;

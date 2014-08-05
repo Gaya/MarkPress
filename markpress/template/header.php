@@ -13,7 +13,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 	<title><?php wp_title(); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11"/>
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
 	<link href='http://fonts.googleapis.com/css?family=PT_Mono|PT+Serif:400,700,400italic,700italic' rel='stylesheet'
 	      type='text/css'>
 	<!--[if lt IE 9]>

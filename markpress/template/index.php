@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-	<section id="markpress-container">
-		<section id="actions">
+	<section class="markpress-container">
+		<section class="markpress-actions">
 			<button class="entries">notes</button>
 			<button class="new">+</button>
 			<button class="mode" data-text-off="edit mode" data-text-on="view mode">view mode</button>
