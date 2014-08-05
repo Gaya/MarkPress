@@ -49,6 +49,9 @@ Want to help? Great! There is a GitHub repo:
 
 == Changelog ==
 
+= 0.1.2 =
+* disable zoom on mobile
+
 = 0.1.1 =
 * Removed admin bar for everyone
 * New posts are now also saved
