@@ -16,7 +16,7 @@
 			<?php get_template_part('form', 'input-form'); ?>
 
 			<section class="markpress-editor__preview">
-				<div id="markpress-preview"></div>
+				<div class="markpress-editor__preview__container"></div>
 			</section>
 		</div>
 	</section>

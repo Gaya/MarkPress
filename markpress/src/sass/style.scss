@@ -103,6 +103,110 @@ html, body {
         padding: rhythm(3) 2% rhythm(1) 2%;
         background: $preview-bg;
         top: 100%;
+
+        &__container {
+            color: $editor-color;
+
+            h1 {
+                @include change-font-size($largest-font-size);
+                font-weight: bold;
+                border-bottom: 1px solid $border-color;
+                margin-bottom: rhythm-border(1, 1px);
+            }
+
+            h2 {
+                @extend h1;
+                @include change-font-size($large-font-size);
+            }
+
+            h3 {
+                @extend h1;
+                @include change-font-size($bigger-font-size);
+            }
+
+            em {
+                font-style: italic;
+            }
+
+            strong {
+                font-weight: bold;
+            }
+
+            p, ul, blockquote, pre {
+                margin-bottom: rhythm(1);
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            code {
+                font-family: 'PT Mono';
+                display: inline-block;
+                background: $code-bg;
+                border: 1px solid $border-color;
+                padding: 0 6px;
+                margin: -2px 0 -2px 0;
+                @include change-font-size($small-font-size);
+            }
+
+            pre {
+                background: $code-bg;
+                border: 1px solid $border-color;
+                padding: rhythm-border(0.5, 1px) 6px;
+
+                code {
+                    display: block;
+                    width: 100%;
+                    border: 0px;
+                    margin: 0;
+                }
+            }
+
+            ul {
+                list-style-type: disc;
+                padding-left: 20px;
+
+                li {
+                    ul, ol {
+                        &:last-child {
+                            margin-bottom: rhythm(1);
+                        }
+                    }
+                }
+            }
+
+            ol {
+                @extend ul;
+                padding-left: 24px;
+                list-style-type: decimal;
+            }
+
+            blockquote {
+                padding: rhythm-border(1, 1px);
+                border: 1px solid $border-color;
+            }
+
+            a {
+                color: $link;
+                text-decoration: underline;
+
+                &:hover {
+                    color: $editor-color;
+                }
+            }
+
+            hr {
+                border: 0;
+                height: 1px;
+                background-color: $border-color;
+                margin: 0 0 rhythm-border(1, 1px) 0;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
     }
 
     &__content {
@@ -186,110 +290,6 @@ html, body {
     display: block;
     font-family: 'PT Mono';
     @include change-font-size($smaller-font-size);
-}
-
-#markpress-preview {
-    color: $editor-color;
-
-    h1 {
-        @include change-font-size($largest-font-size);
-        font-weight: bold;
-        border-bottom: 1px solid $border-color;
-        margin-bottom: rhythm-border(1, 1px);
-    }
-
-    h2 {
-        @extend h1;
-        @include change-font-size($large-font-size);
-    }
-
-    h3 {
-        @extend h1;
-        @include change-font-size($bigger-font-size);
-    }
-
-    em {
-        font-style: italic;
-    }
-
-    strong {
-        font-weight: bold;
-    }
-
-    p, ul, blockquote, pre {
-        margin-bottom: rhythm(1);
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    code {
-        font-family: 'PT Mono';
-        display: inline-block;
-        background: $code-bg;
-        border: 1px solid $border-color;
-        padding: 0 6px;
-        margin: -2px 0 -2px 0;
-        @include change-font-size($small-font-size);
-    }
-
-    pre {
-        background: $code-bg;
-        border: 1px solid $border-color;
-        padding: rhythm-border(0.5, 1px) 6px;
-
-        code {
-            display: block;
-            width: 100%;
-            border: 0px;
-            margin: 0;
-        }
-    }
-
-    ul {
-        list-style-type: disc;
-        padding-left: 20px;
-
-        li {
-            ul, ol {
-                &:last-child {
-                    margin-bottom: rhythm(1);
-                }
-            }
-        }
-    }
-
-    ol {
-        @extend ul;
-        padding-left: 24px;
-        list-style-type: decimal;
-    }
-
-    blockquote {
-        padding: rhythm-border(1, 1px);
-        border: 1px solid $border-color;
-    }
-
-    a {
-        color: $link;
-        text-decoration: underline;
-
-        &:hover {
-            color: $editor-color;
-        }
-    }
-
-    hr {
-        border: 0;
-        height: 1px;
-        background-color: $border-color;
-        margin: 0 0 rhythm-border(1, 1px) 0;
-    }
-
-    img {
-        max-width: 100%;
-    }
 }
 
 .markpress-primary {
