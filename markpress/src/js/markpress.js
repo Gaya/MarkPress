@@ -3,8 +3,8 @@ var Note = require('./Note.js');
 function MarkPress() {
     'use strict';
     this.editor = document.querySelector("#markpress-editor");
-    this.entriesButton = document.querySelector("#actions .entries");
-    this.modeButton = document.querySelector("#actions .mode");
+    this.entriesButton = document.querySelector(".markpress-actions__button--entries");
+    this.modeButton = document.querySelector(".markpress-actions__button--mode");
     this.note = new Note();
 
     this.bindKeydown();

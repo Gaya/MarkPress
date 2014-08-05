@@ -27,8 +27,8 @@ function Note() {
     this.contentElement = document.querySelector("#markpress-editor");
     this.previewElement = document.querySelector("#markpress-preview");
 
-    this.newButton = document.querySelector("#actions .new");
-    this.saveButton = document.querySelector("#actions .save");
+    this.newButton = document.querySelector(".markpress-actions__button--new");
+    this.saveButton = document.querySelector(".markpress-actions__button--save");
 
     this.init();
 }
