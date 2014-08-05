@@ -304,7 +304,7 @@ html, body {
     @include transition(width $anim-speed, left $anim-speed);
 }
 
-#entries {
+.markpress-entries {
     float: left;
     width: 70%;
     padding: rhythm(0.5) 2%;
@@ -318,12 +318,7 @@ html, body {
         padding: rhythm(0.5) 1%;
     }
 
-    h3 {
-        font-weight: normal;
-        font-size: 16px;
-    }
-
-    a {
+    &__list__item__anchor {
         color: $preview-bg;
         text-decoration: none;
 
@@ -335,7 +330,7 @@ html, body {
 }
 
 .menu-open {
-    #entries {
+    .markpress-entries {
         margin-left: 0;
     }
 

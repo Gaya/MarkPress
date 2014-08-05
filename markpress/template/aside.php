@@ -1,4 +1,4 @@
-<ul>
+<ul class="markpress-entries__list">
 	<?php
 	$entries = get_posts(array(
 		'posts_per_page'   => 50,
@@ -9,8 +9,8 @@
 	?>
 
 	<?php foreach ($entries as $entry) : ?>
-		<li>
-			<a href="<?php echo get_permalink($entry->ID); ?>"><?php echo $entry->post_title; ?></a>
+		<li class="markpress-entries__list__item">
+			<a class="markpress-entries__list__item__anchor" href="<?php echo get_permalink($entry->ID); ?>"><?php echo $entry->post_title; ?></a>
 		</li>
 	<?php endforeach; ?>
 </ul>

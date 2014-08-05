@@ -8,7 +8,7 @@
 			<button class="markpress-actions__button--save">save</button>
 		</section>
 
-		<aside id="entries">
+		<aside class="markpress-entries">
 			<?php get_template_part('aside', 'side-bar'); ?>
 		</aside>
 
