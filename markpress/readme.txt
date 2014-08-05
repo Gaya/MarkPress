@@ -51,6 +51,7 @@ Want to help? Great! There is a GitHub repo:
 
 = 0.1.2 =
 * disable zoom on mobile
+* enable view mode on mobile
 
 = 0.1.1 =
 * Removed admin bar for everyone

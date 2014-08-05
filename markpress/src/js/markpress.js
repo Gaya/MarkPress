@@ -42,6 +42,16 @@ MarkPress.prototype.bindButtons = function () {
     this.entriesButton.addEventListener("click", function () {
         document.body.classList.toggle("menu-open");
     }, false);
+
+    this.modeButton.addEventListener("click", function () {
+        document.body.classList.toggle("preview-open");
+
+        if (this.modeButton.innerHTML === this.modeButton.getAttribute("data-text-on")) {
+            this.modeButton.innerHTML = this.modeButton.getAttribute("data-text-off");
+        } else {
+            this.modeButton.innerHTML = this.modeButton.getAttribute("data-text-on");
+        }
+    }.bind(this), false);
 };
 
 var MP = new MarkPress();

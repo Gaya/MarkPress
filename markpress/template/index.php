@@ -2,8 +2,9 @@
 
 	<section id="markpress-container">
 		<section id="actions">
-			<button class="entries">entries</button>
+			<button class="entries">notes</button>
 			<button class="new">+</button>
+			<button class="mode" data-text-off="edit mode" data-text-on="view mode">view mode</button>
 			<button class="save">save</button>
 		</section>
 
