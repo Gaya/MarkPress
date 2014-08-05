@@ -44,11 +44,11 @@ html, body {
         padding: 0 1%;
     }
 
-    button {
+    &__button {
         border: 0;
         background: $editor-bg;
         padding: 0 10px;
-        margin: rhythm(0.35) 10px 0 0;
+        margin: 8px 10px 0 0;
         height: rhythm(1.4);
         cursor: pointer;
         display: block;
@@ -56,22 +56,26 @@ html, body {
         outline: none;
         border-radius: 2px;
 
-        &.save {
+        &--entries {
+            @extend .markpress-actions__button;
+        }
+
+        &--save {
+            @extend .markpress-actions__button;
             float: right;
             margin-right: 0;
         }
 
-        &.mode {
+        &--mode {
+            @extend .markpress-actions__button;
+
             @include media($desktop) {
                 display: none;
             }
         }
 
-        &:hover {
-            background: darken($editor-bg, 10);
-        }
-
-        &.new {
+        &--new {
+            @extend .markpress-actions__button;
             padding: 0;
             width: rhythm(1.4);
             background: $highlight;
@@ -79,6 +83,11 @@ html, body {
             &:hover {
                 background: darken($highlight, 10);
             }
+
+        }
+
+        &:hover {
+            background: darken($editor-bg, 10);
         }
     }
 }

@@ -2,10 +2,10 @@
 
 	<section class="markpress-container">
 		<section class="markpress-actions">
-			<button class="entries">notes</button>
-			<button class="new">+</button>
-			<button class="mode" data-text-off="edit mode" data-text-on="view mode">view mode</button>
-			<button class="save">save</button>
+			<button class="markpress-actions__button--entries">notes</button>
+			<button class="markpress-actions__button--new">+</button>
+			<button class="markpress-actions__button--mode" data-text-off="edit mode" data-text-on="view mode">view mode</button>
+			<button class="markpress-actions__button--save">save</button>
 		</section>
 
 		<aside id="entries">
