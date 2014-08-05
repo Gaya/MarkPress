@@ -225,7 +225,7 @@ html, body {
             top: rhythm(2);
             left: 0;
 
-            input {
+            &__input {
                 color: $editor-color;
                 display: block;
                 width: 100%;
@@ -243,7 +243,8 @@ html, body {
             background: darken($editor-bg, 5);
             top: rhythm(4);
 
-            input {
+            &__input {
+                @extend .markpress-editor__content__title__input;
                 @include change-font-size($smaller-font-size);
                 padding: 0 2% 0 6%;
             }
@@ -265,6 +266,19 @@ html, body {
         &__save {
             display: none;
         }
+
+        &__editor {
+            color: $editor-color;
+            border: 0;
+            outline: none;
+            background: $editor-bg;
+            padding: rhythm(1) 2%;
+            height: 100%;
+            width: 100%;
+            display: block;
+            font-family: 'PT Mono';
+            @include change-font-size($smaller-font-size);
+        }
     }
 
     @include media($desktop) {
@@ -277,19 +291,6 @@ html, body {
             width: 50%;
         }
     }
-}
-
-#markpress-editor {
-    color: $editor-color;
-    border: 0;
-    outline: none;
-    background: $editor-bg;
-    padding: rhythm(1) 2%;
-    height: 100%;
-    width: 100%;
-    display: block;
-    font-family: 'PT Mono';
-    @include change-font-size($smaller-font-size);
 }
 
 .markpress-primary {

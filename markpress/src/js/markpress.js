@@ -2,7 +2,7 @@ var Note = require('./Note.js');
 
 function MarkPress() {
     'use strict';
-    this.editor = document.querySelector("#markpress-editor");
+    this.editor = document.querySelector(".markpress-editor__content__editor");
     this.entriesButton = document.querySelector(".markpress-actions__button--entries");
     this.modeButton = document.querySelector(".markpress-actions__button--mode");
     this.note = new Note();

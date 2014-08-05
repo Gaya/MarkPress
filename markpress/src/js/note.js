@@ -21,10 +21,10 @@ function Note() {
     this.saving = false;
     this.interval = null;
 
-    this.idElement = document.querySelector(".markpress-editor__content input[name=wp-note-id]");
-    this.titleElement = document.querySelector(".markpress-editor__content__title input");
-    this.tagsElement = document.querySelector(".markpress-editor__content__tags input");
-    this.contentElement = document.querySelector("#markpress-editor");
+    this.idElement = document.querySelector("#wp-note-id");
+    this.titleElement = document.querySelector("#wp-title");
+    this.tagsElement = document.querySelector("#wp-note-tags");
+    this.contentElement = document.querySelector(".markpress-editor__content__editor");
     this.previewElement = document.querySelector(".markpress-editor__preview__container");
 
     this.newButton = document.querySelector(".markpress-actions__button--new");
