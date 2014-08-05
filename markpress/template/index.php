@@ -12,7 +12,7 @@
 			<?php get_template_part('aside', 'side-bar'); ?>
 		</aside>
 
-		<div id="primary" class="site-content">
+		<div class="markpress-primary">
 			<?php get_template_part('form', 'input-form'); ?>
 
 			<section class="markpress-editor__preview">

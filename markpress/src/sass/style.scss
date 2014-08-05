@@ -292,7 +292,7 @@ html, body {
     }
 }
 
-#primary {
+.markpress-primary {
     height: 100%;
     position: fixed;
     top: 0;
@@ -334,12 +334,12 @@ html, body {
         margin-left: 0;
     }
 
-    #primary {
+    .markpress-primary {
         left: 70%;
     }
 
     @include media($desktop) {
-        #primary {
+        .markpress-primary {
             width: 80%;
             left: 20%;
         }
