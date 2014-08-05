@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<section id="markpress">
+	<section id="markpress-container">
 		<section id="actions">
 			<button class="entries">entries</button>
 			<button class="new">+</button>
