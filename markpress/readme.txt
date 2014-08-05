@@ -48,6 +48,7 @@ Want to help? Great! There is a GitHub repo:
 
 1. Markdown editor and styled content
 2. The editor on a mobile display
+3. View / read mode on mobile display
 
 == Changelog ==
 
