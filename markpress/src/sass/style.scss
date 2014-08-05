@@ -56,6 +56,10 @@ html, body {
         outline: none;
         border-radius: 2px;
 
+        &:hover {
+            background: darken($editor-bg, 10);
+        }
+
         &--entries {
             @extend .markpress-actions__button;
         }
@@ -81,13 +85,9 @@ html, body {
             background: $highlight;
 
             &:hover {
-                background: darken($highlight, 10);
+                background: lighten($highlight, 10);
             }
 
-        }
-
-        &:hover {
-            background: darken($editor-bg, 10);
         }
     }
 }
