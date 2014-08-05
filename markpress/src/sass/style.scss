@@ -91,7 +91,10 @@ html, body {
         right: 0;
         overflow: auto;
         padding: rhythm(3) 2% rhythm(1) 2%;
+        background: $preview-bg;
         top: 100%;
+
+        @include transition(top $anim-speed);
     }
 
     &__content {
@@ -291,6 +294,12 @@ html, body {
     z-index: 1;
 
     @include transition(width $anim-speed, left $anim-speed);
+
+    &.preview {
+        .markpress-editor__preview {
+            top: 0;
+        }
+    }
 }
 
 #entries {
