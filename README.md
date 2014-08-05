@@ -6,6 +6,7 @@ Write Markdown journal notes using WordPress.
 ##What does it do?
 Takes over your WordPress install on activation and enables the user to quickly write MarkDown powered journal notes.
 
+- Type Markdown on the left, see styled output on the right
 - Automatically saves
 - Quickly add new notes
 - Works on mobile
