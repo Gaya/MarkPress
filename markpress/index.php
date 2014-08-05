@@ -11,6 +11,6 @@
 
 	include "classes/MarkPress.php";
 
-	new MarkPress(plugin_dir_path( __FILE__ ));
+	new MarkPress(plugin_dir_path(__FILE__));
 
 ?>
