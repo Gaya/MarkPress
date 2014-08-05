@@ -12,11 +12,9 @@ Takes over your WordPress install on activation and enables the user to quickly 
 
 == Description ==
 
-= MarkPress =
-
 Write Markdown journal notes using WordPress.
 
-##What does it do?
+= What does it do? =
 Takes over your WordPress install on activation and enables the user to quickly write MarkDown powered journal notes.
 
 - Type Markdown on the left, see styled output on the right
@@ -25,7 +23,9 @@ Takes over your WordPress install on activation and enables the user to quickly 
 - Works on mobile
 - Is plain awesome
 
-##Also on GitHub
+= Also on GitHub =
+
+Want to help out or folk the plugin?
 [https://github.com/Gaya/MarkPress](https://github.com/Gaya/MarkPress)
 
 == Installation ==
@@ -38,7 +38,7 @@ This section describes how to install the plugin and get it working.
 
 == Frequently Asked Questions ==
 
-= GitHub repo =
+= GitHub repository =
 Want to help? Great! There is a GitHub repo:
 [https://github.com/Gaya/MarkPress](https://github.com/Gaya/MarkPress)
 
