@@ -50,6 +50,7 @@ Want to help? Great! There is a GitHub repo:
 == Changelog ==
 
 = 0.1.2 =
+* improved sass and html for BEM classes
 * disable zoom on mobile
 * enable view mode on mobile
 * catch keyboard macro for saving in browsers
