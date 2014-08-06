@@ -27,7 +27,7 @@ Write Markdown journal notes using WordPress.
 
 = Also on GitHub =
 
-Want to help out or folk the plugin?
+Want to help out or fork the plugin?
 [https://github.com/Gaya/MarkPress](https://github.com/Gaya/MarkPress)
 
 == Installation ==
