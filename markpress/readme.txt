@@ -3,7 +3,7 @@ Contributors: gayadesign
 Donate link: http://gaya.ninja/
 Tags: MarkPress, Markdown, Mark down, Journal, notes, ajax
 Requires at least: 3.0.1
-Tested up to: 3.9.1
+Tested up to: 3.9.2
 Stable tag: 0.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -29,6 +29,11 @@ Write Markdown journal notes using WordPress.
 
 Want to help out or fork the plugin?
 [https://github.com/Gaya/MarkPress](https://github.com/Gaya/MarkPress)
+
+= More info =
+
+- [Follow me on Twitter (@GayaNinja)](https://twitter.com/GayaNinja)
+- Visit my blog: [gayadesign.com](http://www.gayadesign.com/)
 
 == Installation ==
 
