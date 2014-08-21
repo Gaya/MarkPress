@@ -43,5 +43,44 @@ class MarkPressAjaxCatcher {
 			echo json_encode(array("saved" => $saved, "post_id" => $post_id));
 			die();
 		}
+
+		if (isset($_POST["mp-action"])) {
+			switch ($_POST["mp-action"]) {
+				case "get_notes":
+					$last_posts = get_posts(array(
+						'posts_per_page'   => 50,
+						'orderby'          => 'post_date',
+						'order'            => 'DESC',
+						'post_type'        => 'mp-note'
+					));
+					$resp = array();
+
+					foreach ($last_posts as $post) {
+						$tags = wp_get_post_tags(get_the_ID());
+						$tag_str = "";
+
+						foreach ($tags as $tag) {
+							$tag_str .= $tag->name;
+
+							if ($tag !== end($tags)) {
+								$tag_str .= ", ";
+							}
+
+						}
+
+						$data = array();
+						$data["id"] = $post->ID;
+						$data["title"] = $post->post_title;
+						$data["content"] = $post->post_content;
+						$data["tags"] = $tag_str;
+
+						array_push($resp, $data);
+					}
+
+					echo json_encode($resp);
+					die();
+				break;
+			}
+		}
 	}
 }
