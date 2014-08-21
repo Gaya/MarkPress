@@ -56,7 +56,7 @@ class MarkPressAjaxCatcher {
 					$resp = array();
 
 					foreach ($last_posts as $post) {
-						$tags = wp_get_post_tags(get_the_ID());
+						$tags = wp_get_post_tags($post->ID);
 						$tag_str = "";
 
 						foreach ($tags as $tag) {
