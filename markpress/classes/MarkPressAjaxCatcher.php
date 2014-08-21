@@ -6,17 +6,17 @@ class MarkPressAjaxCatcher {
 	}
 
 	function catchRequest() {
-		if (isset($_POST["wp-note-submit"])) {
+		if (isset($_POST["mp-note-submit"])) {
 			$saved = false;
             $post_id = "";
 
-			if (isset($_POST['wp-note-id']) && is_numeric($_POST['wp-note-id'])) {
+			if (isset($_POST['mp-note-id']) && is_numeric($_POST['mp-note-id'])) {
 				//let's update a post!
-				$id = $_POST['wp-note-id'];
+				$id = $_POST['mp-note-id'];
                 $post_id = $id;
-				$title = $_POST["wp-note-title"];
-				$content = $_POST["wp-note-content"];
-				$tags = $_POST["wp-note-tags"];
+				$title = $_POST["mp-note-title"];
+				$content = $_POST["mp-note-content"];
+				$tags = $_POST["mp-note-tags"];
 
 				$post = new MarkPressNote();
 				$post->id = $id;
@@ -26,10 +26,10 @@ class MarkPressAjaxCatcher {
 				$post->savePost();
 
 				$saved = true;
-			} else if (isset($_POST['wp-note-id']) && strlen($_POST['wp-note-id']) == 0) {
-				$title = $_POST["wp-note-title"];
-				$content = $_POST["wp-note-content"];
-				$tags = $_POST["wp-note-tags"];
+			} else if (isset($_POST['mp-note-id']) && strlen($_POST['mp-note-id']) == 0) {
+				$title = $_POST["mp-note-title"];
+				$content = $_POST["mp-note-content"];
+				$tags = $_POST["mp-note-tags"];
 
 				$post = new MarkPressNote();
 				$post->setTitle($title);

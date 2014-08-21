@@ -21,9 +21,9 @@ function Note() {
     this.saving = false;
     this.interval = null;
 
-    this.idElement = document.querySelector("#wp-note-id");
-    this.titleElement = document.querySelector("#wp-title");
-    this.tagsElement = document.querySelector("#wp-note-tags");
+    this.idElement = document.querySelector("#mp-note-id");
+    this.titleElement = document.querySelector("#mp-title");
+    this.tagsElement = document.querySelector("#mp-note-tags");
     this.contentElement = document.querySelector(".markpress-editor__content__editor");
     this.previewElement = document.querySelector(".markpress-editor__preview__container");
 
@@ -107,11 +107,11 @@ Note.prototype.savePost = function () {
     request.post("/")
         .type('form')
         .send({
-            'wp-note-id': this.id,
-            'wp-note-title': this.title,
-            'wp-note-tags': this.tags,
-            'wp-note-content': this.content,
-            'wp-note-submit': true
+            'mp-note-id': this.id,
+            'mp-note-title': this.title,
+            'mp-note-tags': this.tags,
+            'mp-note-content': this.content,
+            'mp-note-submit': true
         })
         .set('Accept', 'application/json')
         .end(function(res){
