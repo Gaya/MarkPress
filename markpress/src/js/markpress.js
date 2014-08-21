@@ -5,12 +5,19 @@ function MarkPress() {
     this.editor = document.querySelector(".markpress-editor__content__editor");
     this.entriesButton = document.querySelector(".markpress-actions__button--entries");
     this.modeButton = document.querySelector(".markpress-actions__button--mode");
-    this.note = new Note();
+    this.note = null;
     this.notes = [];
+
+    this.init();
+}
+
+MarkPress.prototype.init = function () {
+    'use strict';
+    this.note = new Note();
 
     this.bindKeydown();
     this.bindButtons();
-}
+};
 
 MarkPress.prototype.bindKeydown = function () {
     'use strict';
