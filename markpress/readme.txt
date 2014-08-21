@@ -58,7 +58,8 @@ Want to help? Great! There is a GitHub repo:
 == Changelog ==
 
 = 0.1.3 =
-
+* fixed bug which submit form when pressing the return key in input fields
+* gets journals through Ajax to decouple template logic
 * refactored all 'wp-*' strings to 'mp-*'. WTH was I thinking?!
 
 = 0.1.2 =
