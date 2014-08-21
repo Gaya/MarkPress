@@ -6,6 +6,7 @@ function MarkPress() {
     this.entriesButton = document.querySelector(".markpress-actions__button--entries");
     this.modeButton = document.querySelector(".markpress-actions__button--mode");
     this.note = new Note();
+    this.notes = [];
 
     this.bindKeydown();
     this.bindButtons();
