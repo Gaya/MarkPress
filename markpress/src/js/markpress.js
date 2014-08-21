@@ -3,6 +3,7 @@ var Note = require('./Note.js');
 
 function MarkPress() {
     'use strict';
+    this.form = document.querySelector(".markpress-editor__content");
     this.editor = document.querySelector(".markpress-editor__content__editor");
     this.entriesButton = document.querySelector(".markpress-actions__button--entries");
     this.modeButton = document.querySelector(".markpress-actions__button--mode");
@@ -18,6 +19,7 @@ MarkPress.prototype.init = function () {
 
     this.bindKeydown();
     this.bindButtons();
+    this.catchSubmit();
 };
 
 MarkPress.prototype.bindKeydown = function () {
@@ -67,6 +69,13 @@ MarkPress.prototype.bindButtons = function () {
             this.modeButton.innerHTML = this.modeButton.getAttribute("data-text-on");
         }
     }.bind(this), false);
+};
+
+MarkPress.prototype.catchSubmit = function () {
+    "use strict";
+    this.form.addEventListener("submit", function (e) {
+        e.preventDefault();
+    }, false);
 };
 
 MarkPress.prototype.setNotes = function (cb) {
