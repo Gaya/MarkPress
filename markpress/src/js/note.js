@@ -11,12 +11,12 @@ marked.setOptions({
 });
 var request = require('superagent');
 
-function Note() {
+function Note(data) {
     'use strict';
-    this.id = null;
-    this.title = null;
-    this.tags = null;
-    this.content = null;
+    this.id = data.id;
+    this.title = data.title;
+    this.tags = data.tags;
+    this.content = data.content;
     this.editing = false;
     this.saving = false;
     this.interval = null;
@@ -35,7 +35,7 @@ function Note() {
 
 Note.prototype.init = function () {
     'use strict';
-    this.setValues();
+    this.setInput();
     this.bindEvents();
     this.startAutoSave();
     this.updatePreview();
@@ -87,6 +87,14 @@ Note.prototype.setValues = function () {
     this.title = this.titleElement.value;
     this.tags = this.tagsElement.value;
     this.content = this.contentElement.value;
+};
+
+Note.prototype.setInput = function () {
+    "use strict";
+    this.idElement.value = this.id;
+    this.titleElement.value = this.title;
+    this.tagsElement.value = this.tags;
+    this.contentElement.value = this.content;
 };
 
 Note.prototype.startAutoSave = function () {

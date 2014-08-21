@@ -14,8 +14,20 @@ function MarkPress() {
 
 MarkPress.prototype.init = function () {
     'use strict';
-    this.notes = this.getNotes();
-    this.note = new Note();
+    this.setNotes(function (notes) {
+        this.notes = notes;
+
+        if (this.notes.length === 0) {
+            notes[0] = {
+                id: null,
+                title: null,
+                tags: null,
+                content: null
+            };
+        }
+
+        this.note = new Note(notes[0]);
+    }.bind(this));
 
     this.bindKeydown();
     this.bindButtons();
@@ -70,7 +82,7 @@ MarkPress.prototype.bindButtons = function () {
     }.bind(this), false);
 };
 
-MarkPress.prototype.getNotes = function () {
+MarkPress.prototype.setNotes = function (cb) {
     'use strict';
     request.post("/")
         .type('form')
@@ -80,7 +92,7 @@ MarkPress.prototype.getNotes = function () {
         .set('Accept', 'application/json')
         .end(function(res){
             var resObj = JSON.parse(res.text);
-            console.log(res);
+            cb(resObj);
         }.bind(this));
 };
 
