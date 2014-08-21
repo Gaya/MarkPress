@@ -57,6 +57,10 @@ Want to help? Great! There is a GitHub repo:
 
 == Changelog ==
 
+= 0.1.3 =
+
+* refactored all 'wp-*' strings to 'mp-*'. WTH was I thinking?!
+
 = 0.1.2 =
 * improved sass and html for BEM classes
 * disable zoom on mobile
