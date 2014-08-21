@@ -1,3 +1,4 @@
+var request = require('superagent');
 var Note = require('./Note.js');
 
 function MarkPress() {
@@ -13,6 +14,7 @@ function MarkPress() {
 
 MarkPress.prototype.init = function () {
     'use strict';
+    this.notes = this.getNotes();
     this.note = new Note();
 
     this.bindKeydown();
@@ -66,6 +68,20 @@ MarkPress.prototype.bindButtons = function () {
             this.modeButton.innerHTML = this.modeButton.getAttribute("data-text-on");
         }
     }.bind(this), false);
+};
+
+MarkPress.prototype.getNotes = function () {
+    'use strict';
+    request.post("/")
+        .type('form')
+        .send({
+            'mp-action': "get_notes"
+        })
+        .set('Accept', 'application/json')
+        .end(function(res){
+            var resObj = JSON.parse(res.text);
+            console.log(res);
+        }.bind(this));
 };
 
 var MP = new MarkPress();
