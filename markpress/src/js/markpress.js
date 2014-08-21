@@ -9,7 +9,7 @@ function MarkPress() {
     this.entriesButton = document.querySelector(".markpress-actions__button--entries");
     this.modeButton = document.querySelector(".markpress-actions__button--mode");
 
-    this.editor = new Editor(this);
+    this.contentEditor = new Editor(this);
     this.note = null;
     this.notes = [];
 
@@ -102,13 +102,15 @@ MarkPress.prototype.setupNotes = function (notes) {
     if (this.notes.length === 0) {
         notes[0] = {
             id: null,
-            title: null,
+            title: this.contentEditor.getDateTitle(),
             tags: null,
             content: null
         };
     }
 
     this.note = new Note(notes[0]);
+
+    this.contentEditor.setInput();
 };
 
 var MP = new MarkPress();
