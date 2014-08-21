@@ -1,15 +1,29 @@
+var request = require('superagent');
+var Editor = require('./Editor.js');
 var Note = require('./Note.js');
 
 function MarkPress() {
     'use strict';
+    this.form = document.querySelector(".markpress-editor__content");
     this.editor = document.querySelector(".markpress-editor__content__editor");
     this.entriesButton = document.querySelector(".markpress-actions__button--entries");
     this.modeButton = document.querySelector(".markpress-actions__button--mode");
-    this.note = new Note();
+
+    this.contentEditor = new Editor(this);
+    this.note = null;
+    this.notes = [];
+
+    this.init();
+}
+
+MarkPress.prototype.init = function () {
+    'use strict';
+    this.setNotes(this.setupNotes.bind(this));
 
     this.bindKeydown();
     this.bindButtons();
-}
+    this.catchSubmit();
+};
 
 MarkPress.prototype.bindKeydown = function () {
     'use strict';
@@ -58,6 +72,45 @@ MarkPress.prototype.bindButtons = function () {
             this.modeButton.innerHTML = this.modeButton.getAttribute("data-text-on");
         }
     }.bind(this), false);
+};
+
+MarkPress.prototype.catchSubmit = function () {
+    "use strict";
+    this.form.addEventListener("submit", function (e) {
+        e.preventDefault();
+    }, false);
+};
+
+MarkPress.prototype.setNotes = function (cb) {
+    'use strict';
+    request.post("/")
+        .type('form')
+        .send({
+            'mp-action': "get_notes"
+        })
+        .set('Accept', 'application/json')
+        .end(function(res){
+            var resObj = JSON.parse(res.text);
+            cb(resObj);
+        }.bind(this));
+};
+
+MarkPress.prototype.setupNotes = function (notes) {
+    'use strict';
+    this.notes = notes;
+
+    if (this.notes.length === 0) {
+        notes[0] = {
+            id: null,
+            title: this.contentEditor.getDateTitle(),
+            tags: null,
+            content: null
+        };
+    }
+
+    this.note = new Note(notes[0]);
+
+    this.contentEditor.setInput();
 };
 
 var MP = new MarkPress();
